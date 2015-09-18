@@ -34,10 +34,10 @@ node index.js code/ simple /simple code/Title-2/Chapter-17/2-1713.xml
 Copy the CSS and by_title directories into the code directory:
 
 ```
-cp -R css simple
-cp -R js simple
+cp -R static/css simple
+cp -R static/js simple
 cp -R code/by_title simple
 ```
 
 [Then set up a testing server](https://gist.github.com/tmcw/4989751) like
-`serve` or `python -m SimpleHTTPServer 8000` to preview the site.
+`serve` or `python -m SimpleHTTPServer 8000` (`python -m http.server 8000` in python3) to preview the site.
