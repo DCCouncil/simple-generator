@@ -21,11 +21,11 @@
             <header>
                 <div class="container">
                 <div class='right no-print'>
-                    <form id='search-form'>
+                    <!-- <form id='search-form'>
                         <form>
                             <input type="text" id="st-search-input" class="st-search-input" />
                         </form>
-                    </form>
+                    </form> -->
                 </div>
                 <h1 id='sitename'><a href='<%= rootdir %>'>Code of the District of Columbia (Unofficial)</a></h1>
             </div>
@@ -54,13 +54,14 @@
                         <% } %>
 
                         <h2>Publication Information</h2>
+                        <h3>Current through <%- recency_info.law.effective %></h3>
                         <dl id="recency">
-                            <dt>Published On</dt>
-                            <dd><%- recency_info.publication_date_formatted %></dd>
-
-                            <dt>Last Codified Act</dt>
-                            <dd><%- recency_info.last_act %><br>
-                            (effective <%- recency_info.last_act_effective_date_formatted %>)</dd>
+                            <dt>Last codified D.C. Law:</dt>
+                            <dd>Law <%- recency_info.law.law %> effective <%- recency_info.law.effective %></dd>
+                            <dt>Last codified Emergency Law:</dt>
+                            <dd>Act <%- recency_info.emergency.law %> effective <%- recency_info.emergency.effective %></dd>
+                            <dt>Last codified Federal Law:</dt>
+                            <dd>Public Law <%- recency_info.federal.law %> approved <%- recency_info.federal.effective %></dd>
                         </dl>
                     </div>
                     <div class='col8'>

@@ -26,10 +26,11 @@ render_body.parse_xml_file(basedir + "/index.xml")
     .find("meta/recency")
     .findall("*")
     .forEach(function(node) {
-        recency_info[node.tag.replace(/-/, "_")] = node.text;
+        recency_info[node.tag] = {
+            law: node.find('law').text,
+            effective: moment(node.find('effective').text).format("MMMM D, YYYY")
+        }
     });
-recency_info.last_act_effective_date_formatted = moment(recency_info.last_act_effective_date).format("MMMM D, YYYY");
-recency_info.publication_date_formatted = moment(recency_info.publication_date).format("dddd, MMMM D, YYYY [at] h:mm a");
 
 // Load pre-made indexes that help us locate the filename for any given section (by citation),
 // and to locate the parent and children of any page.

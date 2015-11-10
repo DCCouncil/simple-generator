@@ -90,6 +90,16 @@ footer p {
     margin-bottom: 10px;
 }
 
+#sidebar h3 {
+    font-size: 12px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+#sidebar dt {
+    font-weight: bold;
+}
+
 #content {
     font-size: 16px;
 }
