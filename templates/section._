@@ -44,12 +44,12 @@
                         <% } %>
 
                         <% if (sibling_previous) { %>
-                            <h2>Previous Section</h2>
+                            <h2>Previous</h2>
                             <p><a href="<%= sibling_previous.filename%>"><%- sibling_previous.title %></a></p>
                         <% } %>
 
                         <% if (sibling_next) { %>
-                            <h2>Next Section</h2>
+                            <h2>Next</h2>
                             <p><a href="<%= sibling_next.filename%>"><%- sibling_next.title %></a></p>
                         <% } %>
 
