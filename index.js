@@ -116,7 +116,6 @@ function convert_file(file) {
         ancestors.push(make_page_link(parent_id));
     }
     ancestors.reverse();
-
     // Write HTML.
     mkdirp.sync(path.dirname(outdir + "/" + section_to_filename[page_id][1]));
     fs.writeFileSync(outdir + "/" + section_to_filename[page_id][1],
@@ -139,7 +138,7 @@ function make_page_link(page_id) {
     var url = rootdir + "/" + section_to_filename[page_id][1];
     url = url.replace(/\/index\.html$/, ''); // no need to put /index.html on URLs
     return {
-        filename: url,
+        filename: url || '/', // ensure that an empty url resolves to root.
         title: render_body.make_page_title(render_body.parse_xml_file(basedir + "/" + section_to_filename[page_id][0]))
     };
 }

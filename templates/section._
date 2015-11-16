@@ -27,7 +27,7 @@
                         </form>
                     </form> -->
                 </div>
-                <h1 id='sitename'><a href='<%= rootdir %>'>Code of the District of Columbia (Unofficial)</a></h1>
+                <h1 id='sitename'><a href='<%= rootdir || '/' %>'>Code of the District of Columbia (Unofficial)</a></h1>
             </div>
             </header>
             <div class='main container'>
