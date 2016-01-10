@@ -136,7 +136,7 @@ function make_page_link(page_id) {
        with information needed to render a link to that page: href and title. */
     if (!page_id) return null;
     var url = rootdir + "/" + section_to_filename[page_id][1];
-    url = url.replace(/\/index\.html$/, ''); // no need to put /index.html on URLs
+    url = url.replace(/\/index\.html$/, '/'); // no need to put /index.html on URLs
     return {
         filename: url || '/', // ensure that an empty url resolves to root.
         title: render_body.make_page_title(render_body.parse_xml_file(basedir + "/" + section_to_filename[page_id][0]))
