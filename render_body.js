@@ -421,7 +421,7 @@ function flatten_body(node, flatten_args, indentation, parent_node_text, parent_
                 var child_id = exports.get_file_id(dom, fn, flatten_args.basedir);
                 section_range = [get_section_range(child_id, 0, flatten_args), get_section_range(child_id, 1, flatten_args)];
                 child_filename = flatten_args.rootdir + "/" + flatten_args.section_to_filename[child_id][1];
-                child_filename = child_filename.replace(/\/index\.html$/, ''); // no need to put /index.html on URLs
+                child_filename = child_filename.replace(/\/index\.html$/, '/'); // no need to put /index.html on URLs
             }
             flatten_args.paras.push({
                 group: para_group,
